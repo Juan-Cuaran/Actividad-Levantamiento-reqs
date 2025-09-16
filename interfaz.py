@@ -37,6 +37,10 @@ class CafeteriaGUI:
 
 
 
+app = CafeteriaGUI()
+app.ventana.mainloop()
+
+
 
  
 
