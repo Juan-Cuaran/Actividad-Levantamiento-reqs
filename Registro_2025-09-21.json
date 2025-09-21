@@ -1,0 +1,44 @@
+[
+    {
+        "Time": "2025-09-21 00:08:30",
+        "Tipo_cliente": "OTROS",
+        "Productos": [
+            {
+                "Nombre": "Cafe",
+                "Precio": 2000.0,
+                "id": "123",
+                "Cantidad": 2,
+                "subtotal_producto": 4000.0
+            }
+        ],
+        "total": 4000.0
+    },
+    {
+        "Time": "2025-09-21 00:34:56",
+        "Tipo_cliente": "ESTUDIANTE",
+        "Productos": [
+            {
+                "Nombre": "Cafe",
+                "Precio": 2000.0,
+                "id": "123",
+                "Cantidad": 2,
+                "subtotal_producto": 4000.0
+            }
+        ],
+        "total": 3600.0
+    },
+    {
+        "Time": "2025-09-21 00:49:26",
+        "Tipo_cliente": "ESTUDIANTE",
+        "Productos": [
+            {
+                "Nombre": "cafe",
+                "Precio": 2000.0,
+                "id": "123",
+                "Cantidad": 2,
+                "subtotal_producto": 4000.0
+            }
+        ],
+        "total": 3600.0
+    }
+]

@@ -30,11 +30,19 @@ class CafeteriaCampus:
                 print("Carné registrado exitosamente.")
             else:
                 print("Este carné ya está registrado.")
-    
+        else:
+            print("El código del carné debe tener exactamente 8 dígitos.")
+
     def AgregarProducto (self):
         nombre = input("Digite el nombre del producto ")
         precio = float(input("Digite el precio del producto "))
-        ide = input("Ingrese el id del producto ")
+        ide = input("Ingrese el id del producto (máximo 8 dígitos) ")
+
+        if not ide.isdigit() or len(ide) > 8:
+            print("El ID debe ser numérico y tener como máximo 8 dígitos.")
+            print("Producto no agregado")
+            return
+
         new_product = Producto(nombre, ide, precio)
         self.lista_productos.append(new_product)
         print(f"Producto {ide} agregado exitosamente")
@@ -83,12 +91,12 @@ class CafeteriaCampus:
                 producto = self.buscar_por_id(producto_id)
                 
                 if producto:
-                    cantidad = int(input(f"¿Cuántos {producto.nombre} desea? "))
-                    if cantidad > 0:
+                    cantidad = int(input(f"¿Cuántos {producto.nombre} desea? (máximo 99) "))
+                    if 1 <= cantidad <= 99:
                         pedido.añadir_producto(producto, cantidad)
                         print(f"Agregado: {cantidad} x {producto.nombre}")
                     else:
-                        print("La cantidad debe ser mayor a 0")
+                        print("La cantidad debe estar entre 1 y 99")
                 else:
                     print("Producto no encontrado")
             elif r == 2:
